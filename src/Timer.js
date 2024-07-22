@@ -21,6 +21,7 @@ class Timer3 extends React.Component{
         }
 
 
+        
         Stop=()=>{
                 clearInterval(interval);
         }
