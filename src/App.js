@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './stylesheet1.css';
+
+import Timer3 from './Timer.js';
+
+
+class App3 extends React.Component{
+       constructor(){
+        super();
+        this.state={
+            // title2:"سلام من اومدم"
+        }
+
+       }
+
+       handleSetTitle2=()=>{
+        this.setState({
+            // title2:"خداحافظ"
+        })
+     }
+
+
+
+    render(){
+        return(
+            <div className="main3">
+                <Timer3 start={this.state.Start}/> 
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App3;
